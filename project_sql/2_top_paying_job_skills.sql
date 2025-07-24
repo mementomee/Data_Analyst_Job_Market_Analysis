@@ -27,4 +27,10 @@ INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC 
+
 -- This query retrieves the top 20 highest-paying Data Analyst job postings with their associated skills, joining job, company, and skills tables, ordered by average yearly salary in descending order.
+/* Key Insights:
+Build the foundation: Master SQL and Python first
+Add visualization: Learn Tableau or Power BI for data presentation
+Go cloud: Gain AWS/Azure experience for salary premiums
+Specialize strategically: Consider big data tools (Spark, Airflow) for high-growth areas */
