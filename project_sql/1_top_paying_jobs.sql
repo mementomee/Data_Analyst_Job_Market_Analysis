@@ -45,5 +45,5 @@ Target tech companies with unique value propositions
 Develop specialized expertise in AI, autonomous vehicles, or FinTech
 Aim for leadership roles - Director positions show significant premiums
 Time your job search - August appears to be peak remote hiring season
-Leverage the onsite premium - these roles pay 31% more than remote-specific positions
+Leverage the onsite premium - these roles pay 43% more than remote-specific positions
 */
