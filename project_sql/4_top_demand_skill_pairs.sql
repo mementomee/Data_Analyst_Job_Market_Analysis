@@ -1,5 +1,3 @@
-
-
 WITH top_skills AS (
     SELECT sd.skills, sd.skill_id
     FROM job_postings_fact jpf
@@ -8,7 +6,7 @@ WITH top_skills AS (
     WHERE jpf.job_title_short = 'Data Analyst'
     GROUP BY sd.skills, sd.skill_id
     ORDER BY COUNT(sjd.job_id) DESC
-    LIMIT 10
+    LIMIT 12
 ),
 
 top_skill_pairs AS (
@@ -28,8 +26,6 @@ top_skill_pairs AS (
 
 SELECT 
     CONCAT(skill_1, ' + ', skill_2) as skill_pair,
-    skill_1,
-    skill_2,
     pair_count,
     ROUND(pair_count * 100.0 / (
         SELECT COUNT(DISTINCT job_id) 
@@ -38,8 +34,8 @@ SELECT
     ), 2) as percentage_of_total_jobs
 FROM top_skill_pairs
 ORDER BY pair_count DESC
-LIMIT 10;
--- This query retrieves the top 10 most common skill pairs for Data Analyst jobs, counting how many job postings require each pair and calculating the percentage of total Data Analyst jobs that require each pair.
+LIMIT 12;
+-- This query retrieves the top 12 most common skill pairs for Data Analyst jobs, counting how many job postings require each pair and calculating the percentage of total Data Analyst jobs that require each pair.
 /* Key Findings:
 Most Valuable Skill Combinations
 SQL + Python (22.70%) - The ultimate power combo for modern data analysis
