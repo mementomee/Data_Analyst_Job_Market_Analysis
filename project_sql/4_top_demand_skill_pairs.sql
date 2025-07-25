@@ -1,5 +1,4 @@
--- Query to find the most common skill pairs for Data Analyst positions
--- This identifies which combinations of skills appear together most frequently
+
 
 WITH top_skills AS (
     SELECT sd.skills, sd.skill_id
@@ -22,7 +21,7 @@ top_skill_pairs AS (
     INNER JOIN skills_job_dim sjd1 ON ts1.skill_id = sjd1.skill_id
     INNER JOIN skills_job_dim sjd2 ON ts2.skill_id = sjd2.skill_id AND sjd1.job_id = sjd2.job_id
     INNER JOIN job_postings_fact jpf ON sjd1.job_id = jpf.job_id
-    WHERE ts1.skill_id < ts2.skill_id  -- Avoid duplicates
+    WHERE ts1.skill_id < ts2.skill_id 
     AND jpf.job_title_short = 'Data Analyst'
     GROUP BY ts1.skills, ts2.skills
 )
