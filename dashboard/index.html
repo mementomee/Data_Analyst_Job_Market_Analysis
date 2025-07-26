@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,10 +31,10 @@
         <div class="container mx-auto px-6 py-8">
             <div class="text-center">
                 <h1 class="text-4xl font-bold mb-2">📊 Data Analyst Market Dashboard</h1>
-                <p class="text-xl opacity-90">Аналіз 196,593 вакансій Data Analyst</p>
+                <p class="text-xl opacity-90">Comprehensive analysis of 196,593 Data Analyst job postings</p>
                 <div class="mt-4 inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full">
                     <span class="animate-pulse">🔴</span>
-                    <span class="ml-2">Оновлено: Липень 2024</span>
+                    <span class="ml-2">Updated: July 2024</span>
                 </div>
             </div>
         </div>
@@ -44,20 +44,26 @@
     <nav class="bg-white shadow-sm border-b">
         <div class="container mx-auto px-6">
             <div class="flex space-x-8 overflow-x-auto">
-                <button onclick="showTab('overview')" class="tab-button active px-4 py-3 text-sm font-medium border-b-2">
-                    🏠 Огляд
+                <button onclick="showTab('presentation')" class="tab-button active px-4 py-3 text-sm font-medium border-b-2">
+                    🎖️ Executive Summary
                 </button>
                 <button onclick="showTab('remote')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
-                    🏠 Remote vs Office
+                    📈 Remote vs Office
                 </button>
-                <button onclick="showTab('skills')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
-                    🎯 Топ навички
+                <button onclick="showTab('job-skills')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🎯 Top Job Skills
                 </button>
-                <button onclick="showTab('paying')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
-                    💰 Високі зарплати
+                <button onclick="showTab('popular-skills')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    👥 Most In-Demand Skills
                 </button>
-                <button onclick="showTab('combinations')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
-                    🔧 Комбінації
+                <button onclick="showTab('skill-pairs')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🔧 Skill Pairs
+                </button>
+                <button onclick="showTab('paying-skills')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    💰 High-Paying Skills
+                </button>
+                <button onclick="showTab('paying-pairs')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🏆 High-Paying Pairs
                 </button>
             </div>
         </div>
@@ -66,81 +72,234 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-8">
         
-        <!-- Overview Tab -->
-        <div id="overview-tab" class="tab-content">
-            <!-- Executive Summary -->
+        <!-- Executive Summary Tab -->
+        <div id="presentation-tab" class="tab-content">
+            <!-- Executive Summary Section -->
             <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
                 <div class="text-center mb-6">
                     <h3 class="text-3xl font-bold text-gray-800 mb-2">🚀 Data Analyst Career Intelligence</h3>
-                    <p class="text-lg text-gray-600">Ваш стратегічний план максимізації заробітку в data analytics</p>
+                    <p class="text-lg text-gray-600 mb-4">Your strategic roadmap to maximizing earning potential in data analytics</p>
+                    <div class="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-800 font-medium">
+                        📈 Analysis of 196,593 job postings • Updated 2024
+                    </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
                     <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-blue-500">
                         <div class="text-3xl font-bold text-blue-600 mb-1">$98.3K</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">Середня зарплата</div>
-                        <div class="text-xs text-gray-500">Remote = On-site</div>
-                        <div class="text-xs text-blue-600 mt-2">💼 Рівні можливості</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Market Average</div>
+                        <div class="text-xs text-gray-500">Remote = On-site pay</div>
+                        <div class="text-xs text-blue-600 mt-2">💼 Equal opportunity</div>
                     </div>
                     <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-green-500">
                         <div class="text-3xl font-bold text-green-600 mb-1">$425K</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">Пік керівництва</div>
-                        <div class="text-xs text-gray-500">SVP-рівень</div>
-                        <div class="text-xs text-green-600 mt-2">🎯 Управлінський трек</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Leadership Peak</div>
+                        <div class="text-xs text-gray-500">SVP-level positions</div>
+                        <div class="text-xs text-green-600 mt-2">🎯 Management track</div>
                     </div>
                     <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-purple-500">
                         <div class="text-3xl font-bold text-purple-600 mb-1">SQL</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">Основна навичка</div>
-                        <div class="text-xs text-gray-500">47% всіх вакансій</div>
-                        <div class="text-xs text-purple-600 mt-2">⚡ Обов'язково</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Foundation Skill</div>
+                        <div class="text-xs text-gray-500">47% of all jobs</div>
+                        <div class="text-xs text-purple-600 mt-2">⚡ Non-negotiable</div>
                     </div>
                     <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-orange-500">
                         <div class="text-3xl font-bold text-orange-600 mb-1">+71%</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">Преміум стеля</div>
-                        <div class="text-xs text-gray-500">Нішеві комбінації</div>
-                        <div class="text-xs text-orange-600 mt-2">🔥 Спеціалізація окупається</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Premium Ceiling</div>
+                        <div class="text-xs text-gray-500">Niche combinations</div>
+                        <div class="text-xs text-orange-600 mt-2">🔥 Specialization pays</div>
                     </div>
                 </div>
 
-                <!-- Career Path -->
-                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">🚀 Оптимальний шлях кар'єрного зростання</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-                        <div class="text-center p-4 bg-gray-50 rounded-lg">
-                            <div class="text-2xl mb-2">🏗️</div>
-                            <h4 class="font-semibold text-gray-800">Фундамент</h4>
-                            <p class="text-lg font-bold text-blue-600">$75K</p>
-                            <p class="text-sm text-gray-600">SQL + Excel</p>
-                            <p class="text-xs text-gray-500">(0-1 рік)</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold text-lg">1</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Market Reality</h4>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg">
-                            <div class="text-2xl mb-2">⚡</div>
-                            <h4 class="font-semibold text-gray-800">Прискорення</h4>
-                            <p class="text-lg font-bold text-green-600">$90K</p>
-                            <p class="text-sm text-gray-600">+ Python</p>
-                            <p class="text-xs text-gray-500">(1-2 роки)</p>
+                        <p class="text-sm text-gray-600">Remote work doesn't penalize salary but limits options - only 12% of positions offer remote work</p>
+                    </div>
+                    
+                    <div class="bg-white p-5 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-green-600 font-bold text-lg">2</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Skill Strategy</h4>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg">
-                            <div class="text-2xl mb-2">📊</div>
-                            <h4 class="font-semibold text-gray-800">Візуалізація</h4>
-                            <p class="text-lg font-bold text-purple-600">$100K</p>
-                            <p class="text-sm text-gray-600">+ Tableau</p>
-                            <p class="text-xs text-gray-500">(2-3 роки)</p>
+                        <p class="text-sm text-gray-600">SQL foundation + Python versatility covers 60% of market demand for rapid career entry</p>
+                    </div>
+                    
+                    <div class="bg-white p-5 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-purple-600 font-bold text-lg">3</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Premium Path</h4>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg">
-                            <div class="text-2xl mb-2">🤖</div>
-                            <h4 class="font-semibold text-gray-800">Спеціалізація</h4>
-                            <p class="text-lg font-bold text-red-600">$118K</p>
-                            <p class="text-sm text-gray-600">+ AI/ML</p>
-                            <p class="text-xs text-gray-500">(3-4 роки)</p>
-                        </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg">
-                            <div class="text-2xl mb-2">💎</div>
-                            <h4 class="font-semibold text-gray-800">Майстерність</h4>
-                            <p class="text-lg font-bold text-orange-600">$152K</p>
-                            <p class="text-sm text-gray-600">Комбінації</p>
-                            <p class="text-xs text-gray-500">(4+ роки)</p>
-                        </div>
+                        <p class="text-sm text-gray-600">Specialized combinations unlock 50-70% salary premiums through niche expertise</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salary Landscape -->
+            <div class="bg-white p-6 rounded-lg border mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">💰 Salary Landscape: Remote vs On-site</h3>
+                <div class="flex justify-center space-x-8 mb-4">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600">$98,557</div>
+                        <div class="text-sm font-medium">Remote Average</div>
+                        <div class="text-xs text-gray-500">747 positions</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600">$98,108</div>
+                        <div class="text-sm font-medium">On-site Average</div>
+                        <div class="text-xs text-gray-500">5,662 positions</div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <p class="text-center font-medium">Remote and on-site positions offer <strong>nearly identical salaries</strong> (difference: $449)</p>
+                    <p class="text-center text-sm text-gray-600 mt-2">On-site positions are 7.6x more common in the market</p>
+                </div>
+            </div>
+
+            <!-- Essential Skills -->
+            <div class="bg-white p-6 rounded-lg border mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">🔧 Essential Skills: Market Demand</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">SQL</div>
+                        <div class="text-lg font-bold text-blue-600">47.12%</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Excel</div>
+                        <div class="text-lg font-bold text-blue-600">34.10%</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Python</div>
+                        <div class="text-lg font-bold text-blue-600">29.16%</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Tableau</div>
+                        <div class="text-lg font-bold text-blue-600">23.68%</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Power BI</div>
+                        <div class="text-lg font-bold text-blue-600">20.08%</div>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <p class="text-center font-medium"><strong>Foundation Strategy:</strong> SQL + Excel covers 60%+ of entry-level requirements</p>
+                </div>
+            </div>
+
+            <!-- Premium Skills -->
+            <div class="bg-white p-6 rounded-lg border mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">🚀 Premium Skills: Highest Salaries</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">PyTorch</div>
+                        <div class="text-lg font-bold text-green-600">$125,226</div>
+                        <div class="text-sm text-green-700">+33% Premium</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">TensorFlow</div>
+                        <div class="text-lg font-bold text-green-600">$120,647</div>
+                        <div class="text-sm text-green-700">+29% Premium</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Kafka</div>
+                        <div class="text-lg font-bold text-green-600">$123,076</div>
+                        <div class="text-sm text-green-700">+31% Premium</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800">Scala</div>
+                        <div class="text-lg font-bold text-green-600">$115,480</div>
+                        <div class="text-sm text-green-700">+23% Premium</div>
+                    </div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <p class="text-center font-medium"><strong>AI/ML Revolution:</strong> Deep learning skills now command premium salaries</p>
+                </div>
+            </div>
+
+            <!-- Ultra-Premium Combinations -->
+            <div class="bg-white p-6 rounded-lg border mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">🎯 Ultra-Premium Combinations ($150K+)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800 text-sm">Go + MATLAB</div>
+                        <div class="text-lg font-bold text-orange-600">$159,335</div>
+                        <div class="text-sm text-orange-700">+71% Premium</div>
+                        <div class="text-xs text-blue-600 font-medium mt-1">Financial Modeling</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800 text-sm">Scala + Oracle</div>
+                        <div class="text-lg font-bold text-orange-600">$157,500</div>
+                        <div class="text-sm text-orange-700">+69% Premium</div>
+                        <div class="text-xs text-blue-600 font-medium mt-1">Enterprise Big Data</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800 text-sm">SQL Server + Kafka</div>
+                        <div class="text-lg font-bold text-orange-600">$154,500</div>
+                        <div class="text-sm text-orange-700">+65% Premium</div>
+                        <div class="text-xs text-blue-600 font-medium mt-1">Real-time Analytics</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg text-center">
+                        <div class="font-bold text-gray-800 text-sm">MongoDB + Hadoop</div>
+                        <div class="text-lg font-bold text-orange-600">$154,220</div>
+                        <div class="text-sm text-orange-700">+65% Premium</div>
+                        <div class="text-xs text-blue-600 font-medium mt-1">NoSQL Big Data</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Progression -->
+            <div class="bg-white p-6 rounded-lg border mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">🚀 Optimal Career Progression</h3>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center relative">
+                        <div class="font-bold text-gray-800">Foundation</div>
+                        <div class="text-xl font-bold text-blue-600">$75K</div>
+                        <div class="text-sm text-gray-600">SQL + Excel</div>
+                        <div class="text-xs text-gray-500">(0-1 year)</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center relative">
+                        <div class="font-bold text-gray-800">Acceleration</div>
+                        <div class="text-xl font-bold text-blue-600">$90K</div>
+                        <div class="text-sm text-gray-600">+ Python</div>
+                        <div class="text-xs text-gray-500">(1-2 years)</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center relative">
+                        <div class="font-bold text-gray-800">Visualization</div>
+                        <div class="text-xl font-bold text-blue-600">$100K</div>
+                        <div class="text-sm text-gray-600">+ Tableau/Power BI</div>
+                        <div class="text-xs text-gray-500">(2-3 years)</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center relative">
+                        <div class="font-bold text-gray-800">Specialization</div>
+                        <div class="text-xl font-bold text-blue-600">$118K</div>
+                        <div class="text-sm text-gray-600">+ AI/ML/Big Data</div>
+                        <div class="text-xs text-gray-500">(3-4 years)</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center relative">
+                        <div class="font-bold text-gray-800">Mastery</div>
+                        <div class="text-xl font-bold text-blue-600">$152K</div>
+                        <div class="text-sm text-gray-600">Premium Combos</div>
+                        <div class="text-xs text-gray-500">(4+ years)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Insight -->
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-5 rounded-lg border-l-4 border-yellow-400">
+                <div class="flex items-center">
+                    <div class="text-2xl mr-3">💡</div>
+                    <div>
+                        <h4 class="font-bold text-yellow-800 mb-1">Strategic Insight</h4>
+                        <p class="text-yellow-700 font-medium">The data analytics market rewards strategic skill building over random technology accumulation. Build foundations first, then specialize for premium earnings.</p>
                     </div>
                 </div>
             </div>
@@ -148,253 +307,434 @@
 
         <!-- Remote vs Office Tab -->
         <div id="remote-tab" class="tab-content hidden">
+            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-blue-900 mb-2">Remote vs Onsite Salary Comparison</h3>
+                <p class="text-blue-700">Average and maximum salaries for Data Analyst positions by work arrangement</p>
+            </div>
             <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">🏠 Remote vs Office: Реальність ринку</h2>
-                <canvas id="remoteChart" class="w-full" height="100"></canvas>
+                <canvas id="remoteChart" width="400" height="200"></canvas>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-blue-50 p-6 rounded-lg border">
-                    <h3 class="text-lg font-semibold text-blue-900 mb-4">🏠 Remote робота</h3>
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="font-semibold text-purple-900 mb-3">Remote Work</h4>
                     <div class="space-y-3">
-                        <div class="flex justify-between">
-                            <span>Середня зарплата:</span>
-                            <span class="font-bold text-2xl text-blue-600">$98,557</span>
+                        <div>
+                            <p class="text-2xl font-bold text-purple-700">$98,557</p>
+                            <p class="text-purple-600">Average Salary</p>
                         </div>
-                        <div class="flex justify-between">
-                            <span>Кількість вакансій:</span>
-                            <span class="font-bold">747</span>
+                        <div>
+                            <p class="text-2xl font-bold text-green-700">747</p>
+                            <p class="text-green-600">Available Positions</p>
                         </div>
-                        <div class="flex justify-between">
-                            <span>Частка ринку:</span>
-                            <span class="font-bold">11.7%</span>
-                        </div>
-                        <div class="text-sm text-blue-600 bg-blue-100 p-2 rounded">
-                            Діапазон: $50K - $256K
+                        <div class="text-sm text-purple-600 bg-purple-100 p-2 rounded">
+                            11.7% of market • Range: $50K - $256K
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-purple-50 p-6 rounded-lg border">
-                    <h3 class="text-lg font-semibold text-purple-900 mb-4">🏢 Office робота</h3>
+                <div class="bg-cyan-50 p-6 rounded-lg">
+                    <h4 class="font-semibold text-cyan-900 mb-3">On-site Work</h4>
                     <div class="space-y-3">
-                        <div class="flex justify-between">
-                            <span>Середня зарплата:</span>
-                            <span class="font-bold text-2xl text-purple-600">$98,108</span>
+                        <div>
+                            <p class="text-2xl font-bold text-cyan-700">$98,108</p>
+                            <p class="text-cyan-600">Average Salary</p>
                         </div>
-                        <div class="flex justify-between">
-                            <span>Кількість вакансій:</span>
-                            <span class="font-bold">5,662</span>
+                        <div>
+                            <p class="text-2xl font-bold text-green-700">5,662</p>
+                            <p class="text-green-600">Available Positions</p>
                         </div>
-                        <div class="flex justify-between">
-                            <span>Частка ринку:</span>
-                            <span class="font-bold">88.3%</span>
-                        </div>
-                        <div class="text-sm text-purple-600 bg-purple-100 p-2 rounded">
-                            Діапазон: $50K - $285K
+                        <div class="text-sm text-cyan-600 bg-cyan-100 p-2 rounded">
+                            88.3% of market • Range: $50K - $285K
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="bg-yellow-50 p-6 rounded-lg border mt-6">
-                <h4 class="font-semibold text-yellow-800 mb-2">💡 Ключові висновки:</h4>
-                <ul class="space-y-1 text-yellow-700">
-                    <li>• <strong>Немає дискримінації по зарплаті</strong>: Remote і office пропонують однакову компенсацію</li>
-                    <li>• <strong>Обмежені remote опції</strong>: Лише 11.7% позицій Data Analyst пропонують віддалену роботу</li>
-                    <li>• <strong>Домінування офісу</strong>: 88.3% можливостей вимагають фізичної присутності</li>
+            <div class="bg-gray-50 p-4 rounded-lg mt-6">
+                <h4 class="font-semibold text-gray-800 mb-2">Key Insights</h4>
+                <ul class="space-y-1 text-gray-700">
+                    <li>• <strong>No salary discrimination</strong>: Remote and on-site offer identical compensation ($98K average)</li>
+                    <li>• <strong>Massive opportunity gap</strong>: On-site positions outnumber remote by 7.6:1 ratio</li>
+                    <li>• <strong>Limited remote options</strong>: Only 11.7% of Data Analyst jobs offer remote work</li>
+                    <li>• <strong>Market reality</strong>: 88.3% of opportunities require physical presence</li>
+                    <li>• <strong>Similar career potential</strong>: Both arrangements reach $250K+ ceiling</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Skills Tab -->
-        <div id="skills-tab" class="tab-content hidden">
-            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">🎯 Найзатребуваніші навички</h2>
-                <canvas id="skillsChart" class="w-full" height="100"></canvas>
+        <!-- Top Job Skills Tab -->
+        <div id="job-skills-tab" class="tab-content hidden">
+            <div class="bg-green-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-green-900 mb-2">Skills Required for Top-Paying Jobs</h3>
+                <p class="text-green-700">Analysis of skills required for the highest-paying Data Analyst positions</p>
+            </div>
+            <div class="grid gap-4">
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">SVP, Data Analytics (Disney)</h4>
+                        <span class="text-lg font-bold text-green-600">$425,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Strategic Leadership</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Advanced Analytics</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Team Management</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Data Administrator (ЛАНИТ)</h4>
+                        <span class="text-lg font-bold text-green-600">$400,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Kafka</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Linux</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SVN</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Director Safety Analysis (Torc)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">BigQuery</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Snowflake</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Tableau</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Senior Quant Analyst (Eden Smith)</h4>
+                        <span class="text-lg font-bold text-green-600">$340,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Hadoop</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Associate Director (AT&T)</h4>
+                        <span class="text-lg font-bold text-green-600">$255,830</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Azure</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Databricks</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Senior Data Analyst (GradBay)</h4>
+                        <span class="text-lg font-bold text-green-600">$240,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-blue-900 text-lg">SQL</h4>
-                    <p class="text-2xl font-bold text-blue-700">92,628</p>
-                    <p class="text-sm text-gray-600">вакансій (47.12%)</p>
+            <div class="bg-gray-50 p-6 rounded-lg mt-6">
+                <h4 class="font-semibold text-gray-800 mb-4">🔍 Key Insights from Top-Paying Positions</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h5 class="font-medium text-blue-600 mb-3">Leadership Premium</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• <strong>C-suite positions</strong> (SVP, Director) command $375K-$425K salaries</li>
+                            <li>• <strong>Management skills</strong> become more valuable than technical depth</li>
+                            <li>• <strong>Strategic thinking</strong> outweighs coding proficiency at senior levels</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-medium text-purple-600 mb-3">Technical Patterns</h5>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• <strong>Database expertise</strong> (Oracle, SQL Server) highly valued</li>
+                            <li>• <strong>Cloud platforms</strong> (AWS, Azure, GCP) essential for scale</li>
+                            <li>• <strong>Big Data tools</strong> (Spark, Hadoop, Airflow) create premium value</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-green-900 text-lg">EXCEL</h4>
-                    <p class="text-2xl font-bold text-green-700">67,031</p>
-                    <p class="text-sm text-gray-600">вакансій (34.10%)</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-purple-900 text-lg">PYTHON</h4>
-                    <p class="text-2xl font-bold text-purple-700">57,326</p>
-                    <p class="text-sm text-gray-600">вакансій (29.16%)</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-orange-900 text-lg">TABLEAU</h4>
-                    <p class="text-2xl font-bold text-orange-700">46,554</p>
-                    <p class="text-sm text-gray-600">вакансій (23.68%)</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-red-900 text-lg">POWER BI</h4>
-                    <p class="text-2xl font-bold text-red-700">39,468</p>
-                    <p class="text-sm text-gray-600">вакансій (20.08%)</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <h4 class="font-semibold text-indigo-900 text-lg">R</h4>
-                    <p class="text-2xl font-bold text-indigo-700">30,075</p>
-                    <p class="text-sm text-gray-600">вакансій (15.30%)</p>
+                <div class="mt-4 p-4 bg-yellow-50 rounded-lg">
+                    <p class="text-yellow-800 font-medium">💡 Career Strategy: Technical skills get you hired, but leadership skills get you promoted to $300K+ positions</p>
                 </div>
             </div>
         </div>
 
-        <!-- Paying Skills Tab -->
-        <div id="paying-tab" class="tab-content hidden">
-            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">💰 Найвищі зарплати по навичках</h2>
-                <canvas id="payingChart" class="w-full" height="100"></canvas>
+        <!-- Most In-Demand Skills Tab -->
+        <div id="popular-skills-tab" class="tab-content hidden">
+            <div class="bg-purple-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-purple-900 mb-2">Most In-Demand Skills</h3>
+                <p class="text-purple-700">Distribution of skill demand across 196,593 job postings</p>
             </div>
-            
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <canvas id="skillsChart" width="400" height="300"></canvas>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">SQL</h4>
+                    <p class="text-xl font-bold text-purple-700">92,628</p>
+                    <p class="text-sm text-gray-600">jobs (47.12%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">EXCEL</h4>
+                    <p class="text-xl font-bold text-purple-700">67,031</p>
+                    <p class="text-sm text-gray-600">jobs (34.10%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">PYTHON</h4>
+                    <p class="text-xl font-bold text-purple-700">57,326</p>
+                    <p class="text-sm text-gray-600">jobs (29.16%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">TABLEAU</h4>
+                    <p class="text-xl font-bold text-purple-700">46,554</p>
+                    <p class="text-sm text-gray-600">jobs (23.68%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">POWER BI</h4>
+                    <p class="text-xl font-bold text-purple-700">39,468</p>
+                    <p class="text-sm text-gray-600">jobs (20.08%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-purple-900 uppercase text-lg">R</h4>
+                    <p class="text-xl font-bold text-purple-700">30,075</p>
+                    <p class="text-sm text-gray-600">jobs (15.30%)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill Pairs Tab -->
+        <div id="skill-pairs-tab" class="tab-content hidden">
+            <div class="bg-indigo-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-indigo-900 mb-2">Most Popular Skill Combinations</h3>
+                <p class="text-indigo-700">Top skill pairs in Data Analyst job requirements</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <canvas id="skillPairsChart" width="400" height="300"></canvas>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">sql + python</h4>
+                    <p class="text-lg font-bold text-indigo-700">44,630</p>
+                    <p class="text-sm text-gray-600">jobs (22.70%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">sql + tableau</h4>
+                    <p class="text-lg font-bold text-indigo-700">34,434</p>
+                    <p class="text-sm text-gray-600">jobs (17.52%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">sql + excel</h4>
+                    <p class="text-lg font-bold text-indigo-700">34,254</p>
+                    <p class="text-sm text-gray-600">jobs (17.42%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">sql + power bi</h4>
+                    <p class="text-lg font-bold text-indigo-700">26,424</p>
+                    <p class="text-sm text-gray-600">jobs (13.44%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">python + r</h4>
+                    <p class="text-lg font-bold text-indigo-700">25,588</p>
+                    <p class="text-sm text-gray-600">jobs (13.02%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">python + tableau</h4>
+                    <p class="text-lg font-bold text-indigo-700">23,233</p>
+                    <p class="text-sm text-gray-600">jobs (11.82%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">sql + r</h4>
+                    <p class="text-lg font-bold text-indigo-700">22,395</p>
+                    <p class="text-sm text-gray-600">jobs (11.39%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-semibold text-indigo-900 uppercase text-sm">excel + tableau</h4>
+                    <p class="text-lg font-bold text-indigo-700">18,803</p>
+                    <p class="text-sm text-gray-600">jobs (9.56%)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- High-Paying Skills Tab -->
+        <div id="paying-skills-tab" class="tab-content hidden">
+            <div class="bg-orange-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-orange-900 mb-2">Highest-Paying Skills</h3>
+                <p class="text-orange-700">Skills that command the highest salaries in the market</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <canvas id="payingChart" width="400" height="300"></canvas>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">PyTorch</h4>
-                        <span class="text-red-600 font-bold">+33.4%</span>
+                        <span class="text-orange-600 font-bold">+33.4%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$125,226</p>
-                    <p class="text-sm text-gray-600">20 вакансій</p>
+                    <p class="text-sm text-gray-600">20 jobs</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">Perl</h4>
-                        <span class="text-red-600 font-bold">+32.8%</span>
+                        <span class="text-orange-600 font-bold">+32.8%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$124,686</p>
-                    <p class="text-sm text-gray-600">20 вакансій</p>
+                    <p class="text-sm text-gray-600">20 jobs</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">Kafka</h4>
-                        <span class="text-red-600 font-bold">+31.1%</span>
+                        <span class="text-orange-600 font-bold">+31.1%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$123,076</p>
-                    <p class="text-sm text-gray-600">39 вакансій</p>
+                    <p class="text-sm text-gray-600">39 jobs</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">TensorFlow</h4>
-                        <span class="text-red-600 font-bold">+28.5%</span>
+                        <span class="text-orange-600 font-bold">+28.5%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$120,647</p>
-                    <p class="text-sm text-gray-600">24 вакансії</p>
+                    <p class="text-sm text-gray-600">24 jobs</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">Cassandra</h4>
-                        <span class="text-red-600 font-bold">+26.1%</span>
+                        <span class="text-orange-600 font-bold">+26.1%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$118,407</p>
-                    <p class="text-sm text-gray-600">11 вакансій</p>
+                    <p class="text-sm text-gray-600">11 jobs</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Atlassian</h4>
+                        <span class="text-orange-600 font-bold">+25.7%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$117,966</p>
+                    <p class="text-sm text-gray-600">15 jobs</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
                     <div class="flex justify-between items-center mb-2">
                         <h4 class="font-semibold">Scala</h4>
-                        <span class="text-red-600 font-bold">+23.0%</span>
+                        <span class="text-orange-600 font-bold">+23.0%</span>
                     </div>
                     <p class="text-lg font-bold text-gray-900">$115,480</p>
-                    <p class="text-sm text-gray-600">59 вакансій</p>
+                    <p class="text-sm text-gray-600">59 jobs</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Confluence</h4>
+                        <span class="text-orange-600 font-bold">+21.6%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$114,153</p>
+                    <p class="text-sm text-gray-600">62 jobs</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">PySpark</h4>
+                        <span class="text-orange-600 font-bold">+21.5%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$114,058</p>
+                    <p class="text-sm text-gray-600">49 jobs</p>
                 </div>
             </div>
         </div>
 
-        <!-- Combinations Tab -->
-        <div id="combinations-tab" class="tab-content hidden">
-            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 Найдорожчі комбінації навичок</h2>
-                <p class="text-gray-600 mb-4">Комбінації, що пропонують найвищі премії до зарплати</p>
+        <!-- High-Paying Pairs Tab -->
+        <div id="paying-pairs-tab" class="tab-content hidden">
+            <div class="bg-red-50 p-4 rounded-lg mb-6">
+                <h3 class="text-lg font-semibold text-red-900 mb-2">Highest-Paying Skill Combinations</h3>
+                <p class="text-red-700">Skill pairs that offer the highest salary premiums</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg border">
-                    <h4 class="font-semibold text-red-800 mb-2">🥇 Go + MATLAB</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>Зарплата:</span>
-                            <span class="font-bold text-2xl">$159,335</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Преміум:</span>
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <canvas id="payingPairsChart" width="400" height="300"></canvas>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">Go + MATLAB</h4>
+                        <div class="text-right">
                             <span class="text-red-600 font-bold">+70.6%</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Вакансій:</span>
-                            <span class="text-blue-600">5</span>
+                            <p class="text-xs text-gray-500">Consistency: 2.78</p>
                         </div>
                     </div>
-                    <p class="text-xs text-red-700 mt-2">💼 Фінансове моделювання</p>
+                    <p class="text-lg font-bold text-gray-900">$159,335</p>
+                    <p class="text-sm text-gray-600">5 jobs</p>
                 </div>
-                
-                <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border">
-                    <h4 class="font-semibold text-purple-800 mb-2">🥈 Scala + Oracle</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>Зарплата:</span>
-                            <span class="font-bold text-2xl">$157,500</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Преміум:</span>
-                            <span class="text-purple-600 font-bold">+68.6%</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Вакансій:</span>
-                            <span class="text-blue-600">6</span>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">Scala + Oracle</h4>
+                        <div class="text-right">
+                            <span class="text-red-600 font-bold">+68.6%</span>
+                            <p class="text-xs text-gray-500">Consistency: 2.77</p>
                         </div>
                     </div>
-                    <p class="text-xs text-purple-700 mt-2">🏢 Enterprise Big Data</p>
+                    <p class="text-lg font-bold text-gray-900">$157,500</p>
+                    <p class="text-sm text-gray-600">6 jobs</p>
                 </div>
-                
-                <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border">
-                    <h4 class="font-semibold text-green-800 mb-2">🥉 Python + Atlassian</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>Зарплата:</span>
-                            <span class="font-bold text-2xl">$155,468</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Преміум:</span>
-                            <span class="text-green-600 font-bold">+66.4%</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Вакансій:</span>
-                            <span class="text-blue-600">6</span>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">Python + Atlassian</h4>
+                        <div class="text-right">
+                            <span class="text-red-600 font-bold">+66.4%</span>
+                            <p class="text-xs text-gray-500">Consistency: 3.85</p>
                         </div>
                     </div>
-                    <p class="text-xs text-green-700 mt-2">🔧 DevOps автоматизація</p>
+                    <p class="text-lg font-bold text-gray-900">$155,468</p>
+                    <p class="text-sm text-gray-600">6 jobs</p>
                 </div>
-                
-                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border">
-                    <h4 class="font-semibold text-blue-800 mb-2">🏆 SQL Server + Kafka</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>Зарплата:</span>
-                            <span class="font-bold text-2xl">$154,500</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Преміум:</span>
-                            <span class="text-blue-600 font-bold">+65.4%</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Вакансій:</span>
-                            <span class="text-blue-600">5</span>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">SQL Server + Kafka</h4>
+                        <div class="text-right">
+                            <span class="text-red-600 font-bold">+65.4%</span>
+                            <p class="text-xs text-gray-500">Consistency: 6.17</p>
                         </div>
                     </div>
-                    <p class="text-xs text-blue-700 mt-2">⚡ Real-time аналітика</p>
+                    <p class="text-lg font-bold text-gray-900">$154,500</p>
+                    <p class="text-sm text-gray-600">5 jobs</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">MongoDB + Hadoop</h4>
+                        <div class="text-right">
+                            <span class="text-red-600 font-bold">+65.1%</span>
+                            <p class="text-xs text-gray-500">Consistency: 4.62</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$154,220</p>
+                    <p class="text-sm text-gray-600">7 jobs</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold">Databricks + Redshift</h4>
+                        <div class="text-right">
+                            <span class="text-red-600 font-bold">+61.2%</span>
+                            <p class="text-xs text-gray-500">Consistency: 4.53</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$150,603</p>
+                    <p class="text-sm text-gray-600">5 jobs</p>
                 </div>
             </div>
             
             <div class="bg-yellow-50 p-6 rounded-lg border mt-6">
-                <h4 class="font-semibold text-yellow-800 mb-2">💡 Стратегічний висновок:</h4>
-                <p class="text-yellow-700">Не просто додавайте навички лінійно. Створюйте комбінації, що вирішують повні бізнес-проблеми і створюють унікальну цінність на ринку.</p>
+                <h4 class="font-semibold text-yellow-800 mb-2">💡 Strategic Insight:</h4>
+                <p class="text-yellow-700">Don't just add skills linearly. Create combinations that solve complete business problems and create unique market value.</p>
             </div>
         </div>
     </main>
@@ -403,7 +743,7 @@
     <footer class="bg-gray-800 text-white py-8 mt-12">
         <div class="container mx-auto px-6 text-center">
             <p class="mb-2">📊 Data Analyst Market Dashboard</p>
-            <p class="text-gray-400 text-sm">Створено на основі SQL аналізу 196,593 вакансій • 2024</p>
+            <p class="text-gray-400 text-sm">Created based on SQL analysis of 196,593 job postings • 2024</p>
         </div>
     </footer>
 
@@ -431,28 +771,32 @@
             // Initialize charts for specific tabs
             setTimeout(() => {
                 if (tabName === 'remote') initRemoteChart();
-                if (tabName === 'skills') initSkillsChart();
-                if (tabName === 'paying') initPayingChart();
+                if (tabName === 'popular-skills') initSkillsChart();
+                if (tabName === 'skill-pairs') initSkillPairsChart();
+                if (tabName === 'paying-skills') initPayingChart();
+                if (tabName === 'paying-pairs') initPayingPairsChart();
             }, 100);
         }
 
         // Chart initialization
         function initRemoteChart() {
-            const ctx = document.getElementById('remoteChart').getContext('2d');
-            new Chart(ctx, {
+            const ctx = document.getElementById('remoteChart');
+            if (!ctx) return;
+            
+            new Chart(ctx.getContext('2d'), {
                 type: 'bar',
                 data: {
-                    labels: ['Remote', 'Office'],
+                    labels: ['Remote', 'On-site'],
                     datasets: [
                         {
-                            label: 'Середня зарплата ($)',
+                            label: 'Average Salary ($)',
                             data: [98557, 98108],
                             backgroundColor: ['#3B82F6', '#8B5CF6'],
                             borderRadius: 4,
                             yAxisID: 'y'
                         },
                         {
-                            label: 'Кількість вакансій',
+                            label: 'Number of Jobs',
                             data: [747, 5662],
                             backgroundColor: ['#10B981', '#F59E0B'],
                             borderRadius: 4,
@@ -469,7 +813,35 @@
                             position: 'left',
                             min: 90000,
                             ticks: {
-                                callback: value => '$' + value.toLocaleString()
+                                callback: value => '
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + value.toLocaleString()
                             }
                         },
                         y1: {
@@ -487,8 +859,10 @@
         }
 
         function initSkillsChart() {
-            const ctx = document.getElementById('skillsChart').getContext('2d');
-            new Chart(ctx, {
+            const ctx = document.getElementById('skillsChart');
+            if (!ctx) return;
+            
+            new Chart(ctx.getContext('2d'), {
                 type: 'doughnut',
                 data: {
                     labels: ['SQL', 'Excel', 'Python', 'Tableau', 'Power BI', 'R'],
@@ -506,7 +880,37 @@
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return context.label + ': ' + context.parsed + '% вакансій';
+                                    return context.label + ': ' + context.parsed + '% of jobs';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initSkillPairsChart() {
+            const ctx = document.getElementById('skillPairsChart');
+            if (!ctx) return;
+            
+            new Chart(ctx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['sql + python', 'sql + tableau', 'sql + excel', 'sql + power bi', 'python + r', 'python + tableau'],
+                    datasets: [{
+                        label: 'Job Count (thousands)',
+                        data: [44.63, 34.43, 34.25, 26.42, 25.59, 23.23],
+                        backgroundColor: '#6366F1',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return value + 'K jobs';
                                 }
                             }
                         }
@@ -516,13 +920,15 @@
         }
 
         function initPayingChart() {
-            const ctx = document.getElementById('payingChart').getContext('2d');
-            new Chart(ctx, {
+            const ctx = document.getElementById('payingChart');
+            if (!ctx) return;
+            
+            new Chart(ctx.getContext('2d'), {
                 type: 'bar',
                 data: {
                     labels: ['PyTorch', 'Perl', 'Kafka', 'TensorFlow', 'Cassandra', 'Scala'],
                     datasets: [{
-                        label: 'Середня зарплата ($)',
+                        label: 'Average Salary ($)',
                         data: [125226, 124686, 123076, 120647, 118407, 115480],
                         backgroundColor: [
                             '#DC2626', '#EF4444', '#F97316', 
@@ -537,7 +943,35 @@
                         y: {
                             ticks: {
                                 callback: function(value) {
-                                    return ' + value.toLocaleString();
+                                    return ' 
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + value.toLocaleString();
                                 }
                             }
                         }
@@ -546,7 +980,136 @@
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return 'Зарплата:  + context.parsed.y.toLocaleString();
+                                    return 'Salary:  
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + context.parsed.y.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initPayingPairsChart() {
+            const ctx = document.getElementById('payingPairsChart');
+            if (!ctx) return;
+            
+            new Chart(ctx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Go + MATLAB', 'Scala + Oracle', 'Python + Atlassian', 'SQL Server + Kafka', 'MongoDB + Hadoop', 'Databricks + Redshift'],
+                    datasets: [{
+                        label: 'Average Salary ($)',
+                        data: [159335, 157500, 155468, 154500, 154220, 150603],
+                        backgroundColor: '#DC2626',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return ' 
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Salary:  
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + context.parsed.y.toLocaleString();
                                 }
                             }
                         }
@@ -557,8 +1120,36 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('📊 Dashboard успішно завантажений!');
+            console.log('📊 Dashboard loaded successfully!');
         });
     </script>
 </body>
-</html>
+</html> 
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python
