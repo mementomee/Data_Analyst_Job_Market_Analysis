@@ -813,16 +813,47 @@
                             position: 'left',
                             min: 90000,
                             ticks: {
-                                callback: value => '
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
-                    </div>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <div class="flex justify-between items-start mb-2">
+                            callback: value => value.toLocaleString()
+                                }
+                            }
+                        }
+                    }
+                        });
+                    }
+                }
+        
+                function initSkillsChart() {
+                    const ctx = document.getElementById('skillsChart');
+                    if (!ctx) return;
+                    
+                    new Chart(ctx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['SQL', 'Excel', 'Python', 'Tableau', 'Power BI', 'R'],
+                            datasets: [{
+                                data: [47.12, 34.10, 29.16, 23.68, 20.08, 15.30],
+                                backgroundColor: [
+                                    '#3B82F6', '#10B981', '#8B5CF6', 
+                                    '#F59E0B', '#EF4444', '#6B7280'
+                                ]
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return context.label + ': ' + context.parsed + '% of jobs';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                </script>
+                <div class="flex justify-between items-start mb-2">
                         <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
                         <span class="text-lg font-bold text-green-600">$375,000</span>
                     </div>
@@ -841,7 +872,7 @@
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + value.toLocaleString()
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
                             }
                         },
                         y1: {
@@ -942,9 +973,11 @@
                     scales: {
                         y: {
                             ticks: {
-                                callback: function(value) {
-                                    return ' 
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
+                        callback: function(value) {
+                                return value.toLocaleString('en-US', {
+                                    style: 'currency',
+                                    currency: 'USD'
+                                });
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
@@ -969,28 +1002,29 @@
                         <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
                         <span class="text-lg font-bold text-green-600">$350,000</span>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python + value.toLocaleString();
                                 }
                             }
                         }
                     },
-                    plugins: {
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
                         tooltip: {
-                            callbacks: {
+                                    return 'Salary: ' + context.parsed.y.toLocaleString('en-US', {
+                                        style: 'currency',
+                                        currency: 'USD'
+                                    });
                                 label: function(context) {
                                     return 'Salary:  
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
-                    </div>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                        return 'Salary: ' + value.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD'
+                        });
                         <span class="text-lg font-bold text-green-600">$375,000</span>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -1003,7 +1037,7 @@
                 </div>
                 <div class="bg-white p-4 rounded-lg border card-hover">
                     <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
                         <span class="text-lg font-bold text-green-600">$350,000</span>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -1037,20 +1071,12 @@
                     scales: {
                         y: {
                             ticks: {
-                                callback: function(value) {
-                                    return ' 
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">R</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SAS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MATLAB</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
-                    </div>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
-                        <span class="text-lg font-bold text-green-600">$375,000</span>
-                    </div>
+                    callback: function(value) {
+                        return value.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD'
+                        });
+                    }
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
@@ -1132,24 +1158,28 @@
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Airflow</span>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
-                        <span class="text-lg font-bold text-green-600">$375,000</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
-                    </div>
-                </div>
-                <div class="bg-white p-4 rounded-lg border card-hover">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
-                        <span class="text-lg font-bold text-green-600">$350,000</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python
+                <div>
+                    <div>
+                        <div class="grid gap-4">
+                            <div class="grid gap-4">
+                                <div class="bg-white p-4 rounded-lg border card-hover">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="font-semibold text-gray-900">Sr. Oracle Analyst (General Dynamics)</h4>
+                                        <span class="text-lg font-bold text-green-600">$375,000</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PostgreSQL</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL Server</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Oracle</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border card-hover">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="font-semibold text-gray-900">Head Data Analytics (Care.com)</h4>
+                                        <span class="text-lg font-bold text-green-600">$350,000</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
