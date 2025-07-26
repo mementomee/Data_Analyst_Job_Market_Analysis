@@ -34,7 +34,7 @@ export const RemoteChart = () => {
       {
         label: 'Number of Jobs',
         data: [747, 5662],
-        backgroundColor: ['hsl(142 76% 36%)', 'hsl(25 95% 53%)'],
+        backgroundColor: ['hsl(259 94% 51%)', 'hsl(217 91% 60%)'],
         borderRadius: 6,
         yAxisID: 'y1'
       }
