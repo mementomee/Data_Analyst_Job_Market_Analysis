@@ -27,7 +27,7 @@ export const RemoteChart = () => {
       {
         label: 'Average Salary ($)',
         data: [98557, 98108],
-        backgroundColor: ['hsl(259 94% 51%)', 'hsl(217 91% 60%)'],
+        backgroundColor: ['hsl(217 91% 60%)', 'hsl(217 91% 60%)'],
         borderRadius: 6,
         yAxisID: 'y'
       },
