@@ -1,3 +1,4 @@
+
 # 📊 Data Analyst Job Market Analysis 2024
 
 > **🚀 [Explore the Interactive Dashboard →](https://mementomee.github.io/Project2/)**
