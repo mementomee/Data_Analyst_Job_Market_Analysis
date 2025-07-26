@@ -26,12 +26,12 @@ export const PayingChart = () => {
       label: 'Average Salary ($)',
       data: [125226, 124686, 123076, 120647, 118407, 115480],
       backgroundColor: [
-        'hsl(0 84% 60%)',
-        'hsl(0 84% 60%)', 
-        'hsl(25 95% 53%)',
-        'hsl(25 95% 53%)', 
+        'hsl(45 93% 47%)',
         'hsl(45 93% 47%)', 
-        'hsl(142 76% 36%)'
+        'hsl(45 93% 47%)',
+        'hsl(45 93% 47%)', 
+        'hsl(45 93% 47%)', 
+        'hsl(45 93% 47%)'
       ],
       borderRadius: 4
     }]

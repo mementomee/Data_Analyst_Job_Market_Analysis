@@ -25,7 +25,7 @@ export const PayingPairsChart = () => {
     datasets: [{
       label: 'Average Salary ($)',
       data: [159335, 157500, 155468, 154500, 154220, 150603],
-      backgroundColor: 'hsl(0 84% 60%)',
+      backgroundColor: 'hsl(25 95% 53%)',
       borderRadius: 4
     }]
   };
