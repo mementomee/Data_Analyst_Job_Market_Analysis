@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Data Analyst Market Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .tab-button.active {
+            border-bottom-color: #3B82F6;
+            color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-2">📊 Data Analyst Market Dashboard</h1>
+                <p class="text-xl opacity-90">Аналіз 196,593 вакансій Data Analyst</p>
+                <div class="mt-4 inline-flex items-center px-4 py-2 bg-white bg-opacity-20 rounded-full">
+                    <span class="animate-pulse">🔴</span>
+                    <span class="ml-2">Оновлено: Липень 2024</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-8 overflow-x-auto">
+                <button onclick="showTab('overview')" class="tab-button active px-4 py-3 text-sm font-medium border-b-2">
+                    🏠 Огляд
+                </button>
+                <button onclick="showTab('remote')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🏠 Remote vs Office
+                </button>
+                <button onclick="showTab('skills')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🎯 Топ навички
+                </button>
+                <button onclick="showTab('paying')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    💰 Високі зарплати
+                </button>
+                <button onclick="showTab('combinations')" class="tab-button px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500">
+                    🔧 Комбінації
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        
+        <!-- Overview Tab -->
+        <div id="overview-tab" class="tab-content">
+            <!-- Executive Summary -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">🚀 Data Analyst Career Intelligence</h3>
+                    <p class="text-lg text-gray-600">Ваш стратегічний план максимізації заробітку в data analytics</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-blue-500">
+                        <div class="text-3xl font-bold text-blue-600 mb-1">$98.3K</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Середня зарплата</div>
+                        <div class="text-xs text-gray-500">Remote = On-site</div>
+                        <div class="text-xs text-blue-600 mt-2">💼 Рівні можливості</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-green-500">
+                        <div class="text-3xl font-bold text-green-600 mb-1">$425K</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Пік керівництва</div>
+                        <div class="text-xs text-gray-500">SVP-рівень</div>
+                        <div class="text-xs text-green-600 mt-2">🎯 Управлінський трек</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-purple-500">
+                        <div class="text-3xl font-bold text-purple-600 mb-1">SQL</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Основна навичка</div>
+                        <div class="text-xs text-gray-500">47% всіх вакансій</div>
+                        <div class="text-xs text-purple-600 mt-2">⚡ Обов'язково</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border-l-4 border-orange-500">
+                        <div class="text-3xl font-bold text-orange-600 mb-1">+71%</div>
+                        <div class="text-sm font-semibold text-gray-700 mb-1">Преміум стеля</div>
+                        <div class="text-xs text-gray-500">Нішеві комбінації</div>
+                        <div class="text-xs text-orange-600 mt-2">🔥 Спеціалізація окупається</div>
+                    </div>
+                </div>
+
+                <!-- Career Path -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">🚀 Оптимальний шлях кар'єрного зростання</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl mb-2">🏗️</div>
+                            <h4 class="font-semibold text-gray-800">Фундамент</h4>
+                            <p class="text-lg font-bold text-blue-600">$75K</p>
+                            <p class="text-sm text-gray-600">SQL + Excel</p>
+                            <p class="text-xs text-gray-500">(0-1 рік)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl mb-2">⚡</div>
+                            <h4 class="font-semibold text-gray-800">Прискорення</h4>
+                            <p class="text-lg font-bold text-green-600">$90K</p>
+                            <p class="text-sm text-gray-600">+ Python</p>
+                            <p class="text-xs text-gray-500">(1-2 роки)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl mb-2">📊</div>
+                            <h4 class="font-semibold text-gray-800">Візуалізація</h4>
+                            <p class="text-lg font-bold text-purple-600">$100K</p>
+                            <p class="text-sm text-gray-600">+ Tableau</p>
+                            <p class="text-xs text-gray-500">(2-3 роки)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl mb-2">🤖</div>
+                            <h4 class="font-semibold text-gray-800">Спеціалізація</h4>
+                            <p class="text-lg font-bold text-red-600">$118K</p>
+                            <p class="text-sm text-gray-600">+ AI/ML</p>
+                            <p class="text-xs text-gray-500">(3-4 роки)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl mb-2">💎</div>
+                            <h4 class="font-semibold text-gray-800">Майстерність</h4>
+                            <p class="text-lg font-bold text-orange-600">$152K</p>
+                            <p class="text-sm text-gray-600">Комбінації</p>
+                            <p class="text-xs text-gray-500">(4+ роки)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Remote vs Office Tab -->
+        <div id="remote-tab" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🏠 Remote vs Office: Реальність ринку</h2>
+                <canvas id="remoteChart" class="w-full" height="100"></canvas>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-blue-50 p-6 rounded-lg border">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-4">🏠 Remote робота</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Середня зарплата:</span>
+                            <span class="font-bold text-2xl text-blue-600">$98,557</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Кількість вакансій:</span>
+                            <span class="font-bold">747</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Частка ринку:</span>
+                            <span class="font-bold">11.7%</span>
+                        </div>
+                        <div class="text-sm text-blue-600 bg-blue-100 p-2 rounded">
+                            Діапазон: $50K - $256K
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-50 p-6 rounded-lg border">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-4">🏢 Office робота</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Середня зарплата:</span>
+                            <span class="font-bold text-2xl text-purple-600">$98,108</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Кількість вакансій:</span>
+                            <span class="font-bold">5,662</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Частка ринку:</span>
+                            <span class="font-bold">88.3%</span>
+                        </div>
+                        <div class="text-sm text-purple-600 bg-purple-100 p-2 rounded">
+                            Діапазон: $50K - $285K
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 p-6 rounded-lg border mt-6">
+                <h4 class="font-semibold text-yellow-800 mb-2">💡 Ключові висновки:</h4>
+                <ul class="space-y-1 text-yellow-700">
+                    <li>• <strong>Немає дискримінації по зарплаті</strong>: Remote і office пропонують однакову компенсацію</li>
+                    <li>• <strong>Обмежені remote опції</strong>: Лише 11.7% позицій Data Analyst пропонують віддалену роботу</li>
+                    <li>• <strong>Домінування офісу</strong>: 88.3% можливостей вимагають фізичної присутності</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Tab -->
+        <div id="skills-tab" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🎯 Найзатребуваніші навички</h2>
+                <canvas id="skillsChart" class="w-full" height="100"></canvas>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-blue-900 text-lg">SQL</h4>
+                    <p class="text-2xl font-bold text-blue-700">92,628</p>
+                    <p class="text-sm text-gray-600">вакансій (47.12%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-green-900 text-lg">EXCEL</h4>
+                    <p class="text-2xl font-bold text-green-700">67,031</p>
+                    <p class="text-sm text-gray-600">вакансій (34.10%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-purple-900 text-lg">PYTHON</h4>
+                    <p class="text-2xl font-bold text-purple-700">57,326</p>
+                    <p class="text-sm text-gray-600">вакансій (29.16%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-orange-900 text-lg">TABLEAU</h4>
+                    <p class="text-2xl font-bold text-orange-700">46,554</p>
+                    <p class="text-sm text-gray-600">вакансій (23.68%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-red-900 text-lg">POWER BI</h4>
+                    <p class="text-2xl font-bold text-red-700">39,468</p>
+                    <p class="text-sm text-gray-600">вакансій (20.08%)</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <h4 class="font-semibold text-indigo-900 text-lg">R</h4>
+                    <p class="text-2xl font-bold text-indigo-700">30,075</p>
+                    <p class="text-sm text-gray-600">вакансій (15.30%)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paying Skills Tab -->
+        <div id="paying-tab" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">💰 Найвищі зарплати по навичках</h2>
+                <canvas id="payingChart" class="w-full" height="100"></canvas>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">PyTorch</h4>
+                        <span class="text-red-600 font-bold">+33.4%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$125,226</p>
+                    <p class="text-sm text-gray-600">20 вакансій</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Perl</h4>
+                        <span class="text-red-600 font-bold">+32.8%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$124,686</p>
+                    <p class="text-sm text-gray-600">20 вакансій</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Kafka</h4>
+                        <span class="text-red-600 font-bold">+31.1%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$123,076</p>
+                    <p class="text-sm text-gray-600">39 вакансій</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">TensorFlow</h4>
+                        <span class="text-red-600 font-bold">+28.5%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$120,647</p>
+                    <p class="text-sm text-gray-600">24 вакансії</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Cassandra</h4>
+                        <span class="text-red-600 font-bold">+26.1%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$118,407</p>
+                    <p class="text-sm text-gray-600">11 вакансій</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border card-hover">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold">Scala</h4>
+                        <span class="text-red-600 font-bold">+23.0%</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900">$115,480</p>
+                    <p class="text-sm text-gray-600">59 вакансій</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combinations Tab -->
+        <div id="combinations-tab" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 Найдорожчі комбінації навичок</h2>
+                <p class="text-gray-600 mb-4">Комбінації, що пропонують найвищі премії до зарплати</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg border">
+                    <h4 class="font-semibold text-red-800 mb-2">🥇 Go + MATLAB</h4>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Зарплата:</span>
+                            <span class="font-bold text-2xl">$159,335</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Преміум:</span>
+                            <span class="text-red-600 font-bold">+70.6%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Вакансій:</span>
+                            <span class="text-blue-600">5</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-red-700 mt-2">💼 Фінансове моделювання</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border">
+                    <h4 class="font-semibold text-purple-800 mb-2">🥈 Scala + Oracle</h4>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Зарплата:</span>
+                            <span class="font-bold text-2xl">$157,500</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Преміум:</span>
+                            <span class="text-purple-600 font-bold">+68.6%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Вакансій:</span>
+                            <span class="text-blue-600">6</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-purple-700 mt-2">🏢 Enterprise Big Data</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border">
+                    <h4 class="font-semibold text-green-800 mb-2">🥉 Python + Atlassian</h4>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Зарплата:</span>
+                            <span class="font-bold text-2xl">$155,468</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Преміум:</span>
+                            <span class="text-green-600 font-bold">+66.4%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Вакансій:</span>
+                            <span class="text-blue-600">6</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-700 mt-2">🔧 DevOps автоматизація</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border">
+                    <h4 class="font-semibold text-blue-800 mb-2">🏆 SQL Server + Kafka</h4>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Зарплата:</span>
+                            <span class="font-bold text-2xl">$154,500</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Преміум:</span>
+                            <span class="text-blue-600 font-bold">+65.4%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Вакансій:</span>
+                            <span class="text-blue-600">5</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-700 mt-2">⚡ Real-time аналітика</p>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 p-6 rounded-lg border mt-6">
+                <h4 class="font-semibold text-yellow-800 mb-2">💡 Стратегічний висновок:</h4>
+                <p class="text-yellow-700">Не просто додавайте навички лінійно. Створюйте комбінації, що вирішують повні бізнес-проблеми і створюють унікальну цінність на ринку.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">📊 Data Analyst Market Dashboard</p>
+            <p class="text-gray-400 text-sm">Створено на основі SQL аналізу 196,593 вакансій • 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab navigation
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active', 'border-blue-500', 'text-blue-600');
+                btn.classList.add('border-transparent', 'text-gray-500');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            
+            // Add active class to selected button
+            event.target.classList.add('active', 'border-blue-500', 'text-blue-600');
+            event.target.classList.remove('border-transparent', 'text-gray-500');
+            
+            // Initialize charts for specific tabs
+            setTimeout(() => {
+                if (tabName === 'remote') initRemoteChart();
+                if (tabName === 'skills') initSkillsChart();
+                if (tabName === 'paying') initPayingChart();
+            }, 100);
+        }
+
+        // Chart initialization
+        function initRemoteChart() {
+            const ctx = document.getElementById('remoteChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Remote', 'Office'],
+                    datasets: [
+                        {
+                            label: 'Середня зарплата ($)',
+                            data: [98557, 98108],
+                            backgroundColor: ['#3B82F6', '#8B5CF6'],
+                            borderRadius: 4,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Кількість вакансій',
+                            data: [747, 5662],
+                            backgroundColor: ['#10B981', '#F59E0B'],
+                            borderRadius: 4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            min: 90000,
+                            ticks: {
+                                callback: value => '$' + value.toLocaleString()
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: { drawOnChartArea: false },
+                            ticks: {
+                                callback: value => value.toLocaleString()
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initSkillsChart() {
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['SQL', 'Excel', 'Python', 'Tableau', 'Power BI', 'R'],
+                    datasets: [{
+                        data: [47.12, 34.10, 29.16, 23.68, 20.08, 15.30],
+                        backgroundColor: [
+                            '#3B82F6', '#10B981', '#8B5CF6', 
+                            '#F59E0B', '#EF4444', '#6B7280'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '% вакансій';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initPayingChart() {
+            const ctx = document.getElementById('payingChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['PyTorch', 'Perl', 'Kafka', 'TensorFlow', 'Cassandra', 'Scala'],
+                    datasets: [{
+                        label: 'Середня зарплата ($)',
+                        data: [125226, 124686, 123076, 120647, 118407, 115480],
+                        backgroundColor: [
+                            '#DC2626', '#EF4444', '#F97316', 
+                            '#F59E0B', '#EAB308', '#84CC16'
+                        ],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Зарплата:  + context.parsed.y.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📊 Dashboard успішно завантажений!');
+        });
+    </script>
+</body>
+</html>
