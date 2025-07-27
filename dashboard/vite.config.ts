@@ -5,10 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig({
   plugins: [react(), componentTagger()],
-  base: '/Data_Analyst_Job_Market_Analysis/'
+  base: '/Data_Analyst_Job_Market_Analysis/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+});
