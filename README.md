@@ -199,15 +199,6 @@ ORDER BY salary_premium DESC;
 
 ---
 
-## 🔗 Project Links
-
-- **📊 Live Dashboard:** https://mementomee.github.io/Project2/
-- **💻 Source Code:** https://github.com/mementomee/Project2
-- **📈 SQL Analysis:** [View SQL Queries](https://github.com/mementomee/Project2/tree/main/project_sql)
-- **💬 Contact:** [@mementomee](https://t.me/mementomee)
-
----
-
 ## 📄 Project Structure
 
 ```
