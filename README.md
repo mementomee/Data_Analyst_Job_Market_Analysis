@@ -1,5 +1,8 @@
-
 # 📊 Data Analyst Job Market Analysis 2024
+
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-View%20Now-brightgreen?style=for-the-badge)](https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-blue?style=for-the-badge)](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis)
+[![SQL Analysis](https://img.shields.io/badge/SQL-Analysis-orange?style=for-the-badge)](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis/tree/main/project_sql)
 
 > **🚀 [Explore the Interactive Dashboard →](https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/)**
 
@@ -199,10 +202,23 @@ ORDER BY salary_premium DESC;
 
 ---
 
+## 🔗 Project Links
+
+- **📊 Live Dashboard:** https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/
+- **💻 Source Code:** https://github.com/mementomee/Data_Analyst_Job_Market_Analysis
+- **📈 SQL Analysis:** [View SQL Queries](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis/tree/main/project_sql)
+
+### 📞 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-username)
+[![Telegram](https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mementomee)
+[![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:petrasuknazar@gmail.com)
+
+---
+
 ## 📄 Project Structure
 
 ```
-Project2/
+Data_Analyst_Job_Market_Analysis/
 ├── dashboard/                 # React dashboard application
 │   ├── src/
 │   │   ├── components/       # React components
@@ -230,8 +246,8 @@ Project2/
 ### Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/mementomee/Project2.git
-cd Project2/dashboard
+git clone https://github.com/mementomee/Data_Analyst_Job_Market_Analysis.git
+cd Data_Analyst_Job_Market_Analysis/dashboard
 
 # Install dependencies
 npm install
@@ -265,7 +281,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/mementomee/Project2/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis/issues).
 
 ---
 
@@ -273,12 +289,13 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 If this project helped you, please give it a ⭐️!
 
-**Built with ❤️ by Nazar**
+**Built with ❤️ by [Nazar](https://github.com/mementomee)**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nazar-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/nazar-petrashchuk-b781472aa/)
+### 🤝 Let's Connect!
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nazar-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/your-linkedin-username)
 [![Telegram](https://img.shields.io/badge/Telegram-@mementomee-26A5E4?style=flat-square&logo=telegram)](https://t.me/mementomee)
 [![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:petrasuknazar@gmail.com)
 
 ---
 
-*Last updated: July 2025 | Data current as of July 2024*
+*Last updated: December 2024 | Data current as of July 2024*
