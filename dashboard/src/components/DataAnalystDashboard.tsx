@@ -27,7 +27,7 @@ export const DataAnalystDashboard = () => {
             <div className="mt-4 flex flex-col items-center gap-3">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full">
                 <span className="animate-pulse">🔴</span>
-                <span className="ml-2 text-white">Updated: July 2024</span>
+                <span className="ml-2 text-white">Data Updated: July 2024</span>
               </div>
               
               {/* GitHub Repository Link */}
@@ -553,7 +553,7 @@ export const DataAnalystDashboard = () => {
           {/* Dashboard Info */}
           <div className="text-center border-t border-white/20 pt-6">
             <p className="mb-2 text-primary-foreground/90">📊 Data Analyst Market Dashboard</p>
-            <p className="text-primary-foreground/70 text-sm mb-4">Created based on SQL analysis of 196,593 job postings • 2024</p>
+            <p className="text-primary-foreground/70 text-sm mb-4">Created based on SQL analysis of 196,593 job postings • 2025</p>
             <button
               onClick={() => scrollToSection('executive-summary')}
               className="text-analytics-accent hover:text-analytics-orange transition-colors text-sm"
