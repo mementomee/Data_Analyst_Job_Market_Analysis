@@ -285,4 +285,4 @@ If this project helped you, please give it a ⭐️!
 
 ---
 
-*Last updated: December 2024 | Data current as of July 2024*
+*Last updated: July 2025 | Data current as of July 2024*
