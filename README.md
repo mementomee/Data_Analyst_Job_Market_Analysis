@@ -1,9 +1,5 @@
 # 📊 Data Analyst Job Market Analysis 2024
 
-[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-View%20Now-brightgreen?style=for-the-badge)](https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-blue?style=for-the-badge)](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis)
-[![SQL Analysis](https://img.shields.io/badge/SQL-Analysis-orange?style=for-the-badge)](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis/tree/main/project_sql)
-
 > **🚀 [Explore the Interactive Dashboard →](https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/)**
 
 A comprehensive analysis of the Data Analyst job market based on 196,593 real job postings, revealing key insights about salaries, skills demand, and career progression opportunities.
@@ -202,19 +198,6 @@ ORDER BY salary_premium DESC;
 
 ---
 
-## 🔗 Project Links
-
-- **📊 Live Dashboard:** https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/
-- **💻 Source Code:** https://github.com/mementomee/Data_Analyst_Job_Market_Analysis
-- **📈 SQL Analysis:** [View SQL Queries](https://github.com/mementomee/Data_Analyst_Job_Market_Analysis/tree/main/project_sql)
-
-### 📞 Connect With Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-username)
-[![Telegram](https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mementomee)
-[![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:petrasuknazar@gmail.com)
-
----
-
 ## 📄 Project Structure
 
 ```
@@ -292,10 +275,10 @@ If this project helped you, please give it a ⭐️!
 **Built with ❤️ by [Nazar](https://github.com/mementomee)**
 
 ### 🤝 Let's Connect!
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nazar-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/your-linkedin-username)
-[![Telegram](https://img.shields.io/badge/Telegram-@mementomee-26A5E4?style=flat-square&logo=telegram)](https://t.me/mementomee)
-[![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:petrasuknazar@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nazar-petrashchuk-b781472aa/)
+[![Telegram](https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mementomee)
+[![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:petrasuknazar@gmail.com)
 
 ---
 
-*Last updated: December 2024 | Data current as of July 2024*
+*Last updated: July 2025 | Data current as of July 2024*
