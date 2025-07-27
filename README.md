@@ -282,7 +282,11 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 If this project helped you, please give it a ⭐️!
 
-**Connect on [Linkedin](www.linkedin.com/in/nazar-petrashchuk-b781472aa)**
+**Built with ❤️ by Nazar**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nazar-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/your-linkedin-username)
+[![Telegram](https://img.shields.io/badge/Telegram-@mementomee-26A5E4?style=flat-square&logo=telegram)](https://t.me/mementomee)
+[![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:petrasuknazar@gmail.com)
 
 ---
 
