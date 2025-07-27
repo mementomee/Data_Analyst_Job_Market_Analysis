@@ -282,7 +282,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 If this project helped you, please give it a ⭐️!
 
-**Built with ❤️ by [Nazar](https://github.com/mementomee) | Connect on [Telegram](https://t.me/mementomee)**
+**Connect on [Linkedin](www.linkedin.com/in/nazar-petrashchuk-b781472aa)**
 
 ---
 
