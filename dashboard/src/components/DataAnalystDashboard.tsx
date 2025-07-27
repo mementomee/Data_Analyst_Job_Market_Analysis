@@ -15,7 +15,9 @@ export const DataAnalystDashboard = () => {
   console.log('Dashboard component loaded successfully');
 
   return (
-     <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-6 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-2 text-white">📊 Data Analyst Market Dashboard</h1>
