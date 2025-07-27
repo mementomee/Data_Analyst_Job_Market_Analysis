@@ -1,7 +1,7 @@
 
 # 📊 Data Analyst Job Market Analysis 2024
 
-> **🚀 [Explore the Interactive Dashboard →](https://mementomee.github.io/Project2/)**
+> **🚀 [Explore the Interactive Dashboard →](https://mementomee.github.io/Data_Analyst_Job_Market_Analysis/)**
 
 A comprehensive analysis of the Data Analyst job market based on 196,593 real job postings, revealing key insights about salaries, skills demand, and career progression opportunities.
 
