@@ -279,7 +279,7 @@ If this project helped you, please give it a ⭐️!
 **Built with ❤️ by [Nazar](https://github.com/mementomee)**
 
 ### 🤝 Let's Connect!
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-username)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nazar-petrashchuk-b781472aa/)
 [![Telegram](https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mementomee)
 [![Email](https://img.shields.io/badge/Email-petrasuknazar@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:petrasuknazar@gmail.com)
 
